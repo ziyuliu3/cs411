@@ -1,0 +1,31 @@
+body{
+    margin: 10;
+    padding: 0;
+    font-family: sans-serif;
+    background: #abbed1;
+}
+.h5 {
+    color: rgb(51, 116, 190);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.button{
+    float: left;
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(167, 129, 157); /*边框*/
+    padding: 40px 10px;
+    width: 150px;
+    outline: none;
+    color: rgb(190, 139, 182);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.card table{
+    background: #f0efee;
+    text-align: center;
+}

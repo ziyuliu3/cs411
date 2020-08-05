@@ -1,0 +1,34 @@
+<!--以下为Navbar官网下载的码，可以替换-->
+<!--像是一个所有界面都会显示的bar-->
+{%load static%}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <!--<img src = "{% static 'images/logo.png'%}">--><!--图片，先注释了-->
+  <a class="navbar-brand" href="#">Correct 100%</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      {% comment %} <li class="nav-item active">
+        <a class="nav-link" href="{% url 'location' %}">Location <span class="sr-only">(current)</span></a>
+      </li> {% endcomment %}
+      {% comment %} <li class="nav-item active">
+        <a class="nav-link" href="{% url 'register' %}">Register <span class="sr-only">(current)</span></a>
+      </li> {% endcomment %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
+      </li>
+      {% comment %} <li class="nav-item active">
+        <a class="nav-link" href="{% url 'location' seller.id %}">Location <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'recommand' products.id %}">Recommend <span class="sr-only">(current)</span></a>
+      </li> {% endcomment %}
+      {% comment %} <li class="nav-item">
+        <a class="nav-link" href="{% url 'products' %}">Profile</a> 
+      </li> {% endcomment %}
+    </ul>
+  </div>
+</nav>
+<!--到此结束-->

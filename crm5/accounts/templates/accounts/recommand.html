@@ -1,0 +1,46 @@
+{% extends 'accounts/main.html' %} <!--之后不用写格式-->
+
+{% block content %}
+
+
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5>Products</h5>
+				</div>
+				<div class="card card-body">
+
+					<table class="table">
+						<tr>
+							<th>productName</th>
+							<th>SellerName</th>
+							<th>Price</th>
+							<th>Location</th>
+							<th>Category</th>
+							<th>Email</th>
+							<th>Buy</th>
+
+						</tr>
+{% comment %} 显示信息 {% endcomment %}
+						{% for i in productset %}
+							<tr>
+								<td>{{i.productName}}</td>
+								<td>{{i.seller}}</td>
+								<td>{{i.price}}</td>
+								<td>{{i.location}}</td>
+								<td>{{i.category}}</td>
+								<td>{{i.seller.email}}</td>
+								<td><a class = 'btn btn-sm btn-success'href="{% url 'buy_product' seller.id i.id %}">Buy!</a></td> <!--class改颜色-->
+							</tr>
+						{% endfor %}
+
+					</table>
+				</div>
+			</div>
+
+		</div>
+
+{% endblock content %}

@@ -1,0 +1,96 @@
+{% extends 'accounts/main.html' %} <!--之后不用写格式-->
+
+{% block content %}
+
+
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5>Search</h5>
+				</div>
+				<div class="card card-body">
+				<form method="get">
+					{{myFilter.form}}
+					<!-- <div id="buttons">
+					<a href="#" class="btn green" name ='keyword' type="submit">dance</a>
+					</div> -->
+		    		<button class="button green" name = 'keyword' type="submit">Search</button>
+		  		</form>
+					<table class="table">
+						<tr>
+							<th>productName</th>
+							<th>Price</th>
+							<th>Depreciation</th>
+							<th>SellerName</th>
+							<th>Email</th>
+							<th>Category</th>
+							<th>Buy</th>
+						</tr>
+{% comment %} 显示信息 {% endcomment %}
+						{% for i in productset %}
+							<tr>
+							<td>{{i.productName }}</td>
+							<td>{{i.price }}</td>
+							<td>{{i.depreciation }}</td>
+							<td>{{i.seller.username }}</td>
+							<td>{{i.seller.email }}</td>
+							<td>{{i.category }}</td>
+							<td><a class = 'btn btn-sm btn-success'href="{% url 'buy_product' seller.id i.id %}">Buy!</a></td>
+							</tr>
+						{% endfor %}
+
+					</table>
+				</div>
+			</div>
+
+		</div>
+
+{% endblock content %}
+
+
+{% comment %} {%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+
+
+
+
+
+		<div class="row">
+	<div class="col">
+		<div class="card card-body">
+
+			<form method="get">
+				{{myFilter.form}}
+
+		    <button class="btn btn-primary" name = 'keyword' type="submit">Search</button>
+		  </form>
+
+		</div>
+	</div>
+
+</div>
+
+{% comment %} 显示信息 {% endcomment %}
+						{% comment %} <tbody>
+						{% for i in productset %}
+						<tr>
+
+							<td>{{i.productName }}</td>
+							<td>{{i.price }}</td>
+							<td>{{i.depreciation }}</td>
+							<td>{{i.category }}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+
+					</table>
+				</div>
+			</div>
+
+		</div>
+{% endblock %} {% endcomment %}

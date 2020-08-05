@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    {% load static %}
+    <link rel = "stylesheet" href="{% static '/css/filter.css' %}">
+
+</head>
+<body>
+
+<form class='box' action="" method="POST">
+    {% csrf_token %}
+    <h1>Filter</h1>
+    <input type="text" id = "location" name = "location" maxlength="20" placeholder='Prefer Location'>
+    <input type="text" id = "catagory" name = "catagory" maxlength="20" placeholder='Prefer Catagory'>
+     <input type="text" id = "prefer" name = "prefer" maxlength="20" placeholder='Prefer Percent 0-1'>
+    </div>
+
+    <div>      
+        <input type="submit" value = "submit">
+        <input type="reset" value = "reset">
+    </div> 
+</form>
+
+</body>
+</html>
